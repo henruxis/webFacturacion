@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GE20N6soqYIwwYNSTjofWcymb5ZYhvtlK3Si7WyxWKM=",
+  "Source": "ERPWebAPI",
+  "BasePath": "_content/ERPWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
