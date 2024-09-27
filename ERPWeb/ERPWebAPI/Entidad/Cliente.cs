@@ -5,7 +5,7 @@ namespace ERPWebAPI.Entidad
     public class Cliente
     {
         public string nombre { get; set; }
-        [Required]
+        
         public string direccion { get; set; }
 
         public string telefono { get; set; }
@@ -25,6 +25,11 @@ namespace ERPWebAPI.Entidad
 
         private (bool, ValidationResult) GetVaslidationStatus(string nombre, string direccion, string correo)
         {
+            if (string.IsNullOrWhiteSpace(nombre))
+            {
+                return (false, new ValidationResult("El nombre es requerido"));
+            }
+
             if (!string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(direccion))
             {
                 return (false, new ValidationResult("La direccion es requerida"));
