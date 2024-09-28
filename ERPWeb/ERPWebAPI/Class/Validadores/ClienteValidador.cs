@@ -32,12 +32,12 @@ namespace ERPWebAPI.Class.Validadores
                 return (false, new ValidationResult("El nombre es requerido"));
             }
 
-            if (!string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(direccion))
+            if (string.IsNullOrWhiteSpace(direccion))
             {
                 return (false, new ValidationResult("La direccion es requerida"));
             }
 
-            if (!string.IsNullOrWhiteSpace(direccion) && string.IsNullOrWhiteSpace(correo))
+            if (string.IsNullOrWhiteSpace(correo))
             {
                 return (false, new ValidationResult("El email es requerido"));
             }
