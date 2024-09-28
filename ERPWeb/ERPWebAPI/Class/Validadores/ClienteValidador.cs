@@ -1,21 +1,23 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ERPWebAPI.Entidad
+namespace ERPWebAPI.Class.Validadores
 {
-    public class Cliente
+    public class ClienteValidador : IValidatableObject
     {
-        public string nombre { get; set; }
-        
-        public string direccion { get; set; }
 
-        public string telefono { get; set; }
+        public int id { get; set; } = 0;
 
-        public string correo { get; set; }
+        public string nombre { get; set; } = string.Empty;
 
+        public string direccion { get; set; } = string.Empty;
+
+        public string telefono { get; set; } = string.Empty;
+
+        public string correo { get; set; } = string.Empty;
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            var (valid, result) = GetVaslidationStatus(nombre, direccion,correo);
+            var (valid, result) = GetVaslidationStatus(nombre, direccion, correo);
 
             if (!valid)
             {
@@ -42,5 +44,6 @@ namespace ERPWebAPI.Entidad
 
             return (true, null);
         }
+
     }
 }

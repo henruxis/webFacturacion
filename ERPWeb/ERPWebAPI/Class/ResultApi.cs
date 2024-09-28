@@ -2,7 +2,7 @@
 {
     public class ResultApi
     {
-        public string Success { get; set; }
-        public object information { get; set; }
+        public string Success { get; set; } = string.Empty;
+        public object information { get; set; } = string.Empty;
     }
 }
