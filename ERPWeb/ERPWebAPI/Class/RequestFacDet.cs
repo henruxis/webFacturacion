@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ERPWebAPI.Models;
 
-namespace ERPWebAPI.Models
+namespace ERPWebAPI.Class
 {
-    public class FacturaDetalle
+    public class RequestFacDet
     {
         public int IdDetalle { get; set; }
         public int IdFactura { get; set; } // Clave foránea que apunta a FacturaCabecera
@@ -13,6 +13,5 @@ namespace ERPWebAPI.Models
 
         // Relación con FacturaCabecera (muchos FacturaDetalle pertenecen a una FacturaCabecera)
         public FacturaCabecera FacturaCabecera { get; set; }
-
     }
 }

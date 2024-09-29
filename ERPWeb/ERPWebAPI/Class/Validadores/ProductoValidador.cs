@@ -2,7 +2,7 @@
 
 namespace ERPWebAPI.Class.Validadores
 {
-    public class ArticuloValidador
+    public class ArticuloValidador : IValidatableObject
     {
 
         public int id { get; set; } = 0;
